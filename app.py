@@ -2,7 +2,6 @@ from datetime import datetime
 from re import template
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-import sqlalchemy
 from datetime import datetime
 
 app = Flask(__name__)
@@ -18,7 +17,6 @@ class Todo(db.Model):
 
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
-
 
 @app.route('/',methods=['GET','POST'])
 def data_entry():
