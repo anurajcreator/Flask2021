@@ -58,5 +58,6 @@ def delete(sno):
     return redirect("/")
 
 if __name__ == "__main__" :
+    print("HEllo")
     app.run(debug=True)
 
